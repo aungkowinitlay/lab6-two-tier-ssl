@@ -1,8 +1,11 @@
 from flask import Flask, jsonify
-app = Flask(__name__)
+from flask_cors import CORS
 
-@app.route("/")
-def home():
+app = Flask(__name__)
+CORS(app)  # allow frontend access
+
+@app.route("/api", methods=["GET"])
+def get_message():
     return jsonify({"message": "Hello from the backend!"})
 
 if __name__ == "__main__":
