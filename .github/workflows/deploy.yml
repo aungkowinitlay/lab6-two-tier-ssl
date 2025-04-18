@@ -19,6 +19,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /path/to/lab6-two-tier-ssl
+            cd /root/lab6-two-tier-ssl
             chmod +x deploy.sh
             ./deploy.sh
