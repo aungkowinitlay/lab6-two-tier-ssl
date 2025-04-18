@@ -17,7 +17,7 @@
     <script>
     async function getMessage() {
         try {
-            const res = await fetch("https://api.vaultsphere.online/");
+            const res = await fetch("https://api.vaultsphere.online");
             const data = await res.json();
             document.getElementById("message").innerText = data.message;
         } catch (error) {
