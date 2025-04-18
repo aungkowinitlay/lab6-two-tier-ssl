@@ -17,7 +17,7 @@
     <script>
     async function getMessage() {
         try {
-            const res = await fetch("http://api.vaultsphere.online");
+            const res = await fetch("/api"); // ✅ FIXED: Use relative path for reverse proxy
             const data = await res.json();
             document.getElementById("message").innerText = data.message;
         } catch (error) {
